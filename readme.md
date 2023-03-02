@@ -13,3 +13,7 @@ Uses backtracking algorithm
 3. Enter desired number
 4. After board is filled click space bar for it to solve
 5. Tada !!
+
+# Demo
+
+![](https://github.com/SyntaxErrohit/Sudoku-solver/blob/master/sudoku-solver-how-to.gif)
