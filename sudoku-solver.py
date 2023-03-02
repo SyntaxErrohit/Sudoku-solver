@@ -2,8 +2,8 @@ import pygame
 
 pygame.init()
 
-display_width = 452
-display_height = 452
+display_width = 451
+display_height = 451
 game_display = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption("Sudoku solver")
 font = pygame.font.SysFont(None, 50)
@@ -23,13 +23,13 @@ test_board = [
 
 def draw_board(x=10, y=10):
     game_display.fill((30, 76, 115))
-    for i in range(9):
+    for i in range(10):
         pygame.draw.line(game_display, (1, 36, 86), (0, i*50), (500, i*50), 3+3*(i%3==0))
         pygame.draw.line(game_display, (1, 36, 86), (i*50, 0), (i*50, 500), 3+3*(i%3==0))
     for row in range(9):
         for col in range(9):
             if row == x and col == y:
-                box = pygame.Rect(col*50, row*50, 50, 50)
+                box = pygame.Rect(col*50+3, row*50+3, 44, 44)
                 pygame.draw.rect(game_display, (127, 127, 127), box)
             text = font.render(board[row][col], True, (204, 204, 204))
             text_rect = text.get_rect()
